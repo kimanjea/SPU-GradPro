@@ -27,21 +27,21 @@ public class playeraction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)) // this will help with moving forward animation whenever we press forward
         {
             playerAnim.SetTrigger("emote"); // we set the trigger to look for our running transition to match what is in our Unity Animator object
-            //playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
+            playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
           
         }
 
         if (Input.GetKeyDown(KeyCode.W)) // this will help with moving forward animation whenever we press forward
         {
             playerAnim.SetTrigger("walk"); // we set the trigger to look for our running transition to match what is in our Unity Animator object
-            //playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
+            playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
           
         }
 
         if (Input.GetKeyDown(KeyCode.S)) // this will help with moving forward animation whenever we press forward
         {
             playerAnim.SetTrigger("walkback"); // we set the trigger to look for our running transition to match what is in our Unity Animator object
-            //playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
+            playerAnim.ResetTrigger("idle"); //we reset the idle trigger to match  that we are transitions
           
         }
 

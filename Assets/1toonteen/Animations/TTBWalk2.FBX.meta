@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: 887960ca7acecd546a9e4e5633972534
-AssetOrigin:
-  serializedVersion: 1
-  productId: 135513
-  packageName: 1 toon teen
-  packageVersion: 1.3
-  assetPath: Assets/1toonteen/Animations/TTBWalk2.FBX
-  uploadId: 572159
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -386,6 +379,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: ROOT
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -412,7 +407,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
