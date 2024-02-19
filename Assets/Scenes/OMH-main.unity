@@ -4131,7 +4131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 971000313}
   playerRigid: {fileID: 873029105}
-  w_speed: 400
+  w_speed: 700
   wb_speed: 60
   olw_speed: 60
   rn_speed: 60

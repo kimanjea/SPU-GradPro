@@ -24,8 +24,8 @@ public class playertest : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-
-            playerRigid.velocity = -transform.forward * wb_speed * Time.deltaTime;
+			
+			playerRigid.velocity = -transform.forward * wb_speed * Time.deltaTime;
 
         }
 
@@ -66,6 +66,7 @@ public class playertest : MonoBehaviour
             playerAnim.SetTrigger("walkback");
 
             playerAnim.ResetTrigger("idle");
+			
 
             //steps1.SetActive(true);
 

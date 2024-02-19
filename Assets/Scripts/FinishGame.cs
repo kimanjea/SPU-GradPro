@@ -10,6 +10,7 @@ public class FinishGame : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+			Debug.Log("New Scene Loaded");
         }
     }
 }

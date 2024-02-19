@@ -12,6 +12,7 @@ public class teleport : MonoBehaviour
         {
          
             SceneManager.LoadScene(scenename);
+			Debug.Log("New Scene Loaded");
             
         }
     }

@@ -24,12 +24,13 @@ public class traversal_check : MonoBehaviour
             {
                 if (userbuttons[i] != buttons[i])
                 {
-                    Debug.Log("WASTED WRONG IDOT DUMBASS");
+                    Debug.Log("Wrong Order");
                     userbuttons.Clear();
+					//desiredColor = (1, 0, 0, 1);
                     return;
                 }
             }
-            Debug.Log("WOW YOU ACTUALLY DID IT");
+            Debug.Log("Correct Order");
             return;
         }       
     }
