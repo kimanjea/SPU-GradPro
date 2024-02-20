@@ -25,8 +25,8 @@ public class traversal_check : MonoBehaviour
                 if (userbuttons[i] != buttons[i])
                 {
                     Debug.Log("Wrong Order");
+                    
                     userbuttons.Clear();
-					//desiredColor = (1, 0, 0, 1);
                     return;
                 }
             }
