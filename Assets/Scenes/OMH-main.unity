@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42221254, g: 0.64316183, b: 0.793691, a: 1}
+  m_IndirectSpecularColor: {r: 0.42222112, g: 0.6436584, b: 0.79365975, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 97c078916022e40488b35329cb121bfd, type: 2}
+    - target: {fileID: 9500000, guid: 753b38eb36b5add498f220edebff3f9b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4132,7 +4136,7 @@ MonoBehaviour:
   playerAnim: {fileID: 971000313}
   playerRigid: {fileID: 873029105}
   w_speed: 700
-  wb_speed: 60
+  wb_speed: 500
   olw_speed: 60
   rn_speed: 60
   ro_speed: 60
