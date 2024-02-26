@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42222112, g: 0.6436584, b: 0.79365975, a: 1}
+  m_IndirectSpecularColor: {r: 0.42222098, g: 0.64365846, b: 0.7936594, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -505,7 +505,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 873029103}
   m_Follow: {fileID: 873029103}
   m_Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 65
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -4244,8 +4244,8 @@ MonoBehaviour:
   playerRigid: {fileID: 873029105}
   w_speed: 700
   wb_speed: 500
-  olw_speed: 60
-  rn_speed: 60
+  olw_speed: 700
+  rn_speed: 900
   ro_speed: 60
   walking: 0
   playerTrans: {fileID: 873029103}
