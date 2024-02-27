@@ -3,36 +3,39 @@ using UnityEngine;
 
 public class traversal_check : MonoBehaviour
 {
-
     public GameObject[] buttons;
-
+    public int lifecount = 3;
+    public bool wrongorder = false;
+    public bool correctorder = false;
     public List<GameObject> userbuttons = new List<GameObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
-
-               
+        // Initialization code if needed
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Debug.Log("Life Count: " + lifecount);
         if (userbuttons.Count == buttons.Length)
         {
-            for(int i = 0;  i < buttons.Length; i++)
+            for (int i = 0; i < buttons.Length; i++)
             {
-                if (userbuttons[i] != buttons[i])
+                // Compare using a unique identifier (e.g., name, tag, etc.)
+                if (userbuttons[i].name != buttons[i].name)
                 {
                     Debug.Log("Wrong Order");
-                    
-                    userbuttons.Clear();
+                    wrongorder = true;
+                    wrongordercheck();
+                    lifecount--;
                     return;
                 }
             }
             Debug.Log("Correct Order");
+            correctorder = true;
+            correctordercheck();
             return;
-        }       
+        }
     }
 
     public void Addtouserbuttons(GameObject buttonstoadd)
@@ -40,4 +43,21 @@ public class traversal_check : MonoBehaviour
         userbuttons.Add(buttonstoadd);
     }
 
+    void wrongordercheck()
+    {
+        if (wrongorder)
+        {
+            Debug.Log("Wrong Order");
+            userbuttons.Clear();
+        }
+    }
+
+    void correctordercheck()
+    {
+        if (correctorder)
+        {
+            Debug.Log("Correct Order");
+            userbuttons.Clear();
+        }
+    }
 }
