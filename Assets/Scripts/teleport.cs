@@ -8,7 +8,7 @@ public class teleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
          
             SceneManager.LoadScene(scenename);

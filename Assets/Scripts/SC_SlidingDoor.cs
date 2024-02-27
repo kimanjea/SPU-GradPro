@@ -1,17 +1,14 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SC_SlidingDoor : MonoBehaviour
 {
-    public traversal_check lifecount;
-
     // Sliding door
-    public AnimationCurve openSpeedCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0, 1, 0, 0), new Keyframe(0.8f, 1, 0, 0), new Keyframe(1, 0, 0, 0) });
+    public AnimationCurve openSpeedCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0, 1, 0, 0), new Keyframe(0.8f, 1, 0, 0), new Keyframe(1, 0, 0, 0) }); //Contols the open speed at a specific time (ex. the door opens fast at the start then slows down at the end)
     public enum OpenDirection { x, y, z }
     public OpenDirection direction = OpenDirection.y;
-    public float openDistance = 7f;
-    public float openSpeedMultiplier = 2.0f;
-    public Transform doorBody;
+    public float openDistance = 7f; //How far should door slide (change direction by entering either a positive or a negative value)
+    public float openSpeedMultiplier = 2.0f; //Increasing this value will make the door open faster
+    public Transform doorBody; //Door body Transform
 
     bool open = false;
 
@@ -26,41 +23,36 @@ public class SC_SlidingDoor : MonoBehaviour
             defaultDoorPosition = doorBody.localPosition;
         }
 
-        // Set Collider as trigger
-       // GetComponent<Collider>().isTrigger = true;
+        //Set Collider as trigger
+        GetComponent<Collider>().isTrigger = true;
     }
 
     // Main function
     void Update()
     {
-        // Check if the life count has reached 0
-        if (lifecount != null && lifecount.lifecount == 0)
+        if (!doorBody)
+            return;
+
+        if (openTime < 1)
         {
-            GetComponent<Collider>().isTrigger = true;
-            if (!doorBody)
-                return;
+            openTime += Time.deltaTime * openSpeedMultiplier * openSpeedCurve.Evaluate(openTime);
+        }
 
-            if (openTime < 1)
-            {
-                openTime += Time.deltaTime * openSpeedMultiplier * openSpeedCurve.Evaluate(openTime);
-            }
-
-            if (direction == OpenDirection.x)
-            {
-                doorBody.localPosition = new Vector3(Mathf.Lerp(currentDoorPosition.x, defaultDoorPosition.x + (open ? openDistance : 0), openTime), doorBody.localPosition.y, doorBody.localPosition.z);
-            }
-            else if (direction == OpenDirection.y)
-            {
-                doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(currentDoorPosition.y, defaultDoorPosition.y + (open ? openDistance : 0), openTime), doorBody.localPosition.z);
-            }
-            else if (direction == OpenDirection.z)
-            {
-                doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(currentDoorPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), openTime));
-            }
+        if (direction == OpenDirection.x)
+        {
+            doorBody.localPosition = new Vector3(Mathf.Lerp(currentDoorPosition.x, defaultDoorPosition.x + (open ? openDistance : 0), openTime), doorBody.localPosition.y, doorBody.localPosition.z);
+        }
+        else if (direction == OpenDirection.y)
+        {
+            doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(currentDoorPosition.y, defaultDoorPosition.y + (open ? openDistance : 0), openTime), doorBody.localPosition.z);
+        }
+        else if (direction == OpenDirection.z)
+        {
+            doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(currentDoorPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), openTime));
         }
     }
 
-    // Activate the Main function when the Player enters the trigger area
+    // Activate the Main function when Player enter the trigger area
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -71,7 +63,7 @@ public class SC_SlidingDoor : MonoBehaviour
         }
     }
 
-    // Deactivate the Main function when the Player exits the trigger area
+    // Deactivate the Main function when Player exit the trigger area
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
