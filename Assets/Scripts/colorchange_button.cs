@@ -84,7 +84,7 @@ public class colorchange_button : MonoBehaviour
         if (wrongorder != null && wrongorder.wrongorder)
         {
             isPressed = false;
-            StartCoroutine(WrongColorAndWait(3f));
+            StartCoroutine(WrongColorAndWait(1f));
         }
     }
 
