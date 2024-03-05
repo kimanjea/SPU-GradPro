@@ -65,7 +65,7 @@ public class colorchange_button : MonoBehaviour
         if (correctorder != null && correctorder.correctorder)
         {
             isPressed = false;
-            StartCoroutine(CorrectColorAndWait(3f));
+            StartCoroutine(CorrectColorAndWait(1f));
         }
     }
 
