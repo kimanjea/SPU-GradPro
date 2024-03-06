@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42222098, g: 0.64365846, b: 0.7936594, a: 1}
+  m_IndirectSpecularColor: {r: 0.42221254, g: 0.64316183, b: 0.793691, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -476,6 +476,8 @@ GameObject:
   - component: {fileID: 348583465}
   - component: {fileID: 348583467}
   - component: {fileID: 348583466}
+  - component: {fileID: 348583468}
+  - component: {fileID: 348583469}
   m_Layer: 0
   m_Name: Ext_BA_Door Frame_01
   m_TagString: Untagged
@@ -549,6 +551,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348583464}
   m_Mesh: {fileID: -8622421094780494841, guid: cb07ca870cf1d5444b85ea4e3ee49a58, type: 3}
+--- !u!65 &348583468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348583464}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8079059, y: 3.1367462, z: 0.30070022}
+  m_Center: {x: 0.00010561943, y: 1.5683726, z: 1.2510234}
+--- !u!114 &348583469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348583464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ace9cd2f849f34aa541b49c8103af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenename: Tree
 --- !u!1 &368844843
 GameObject:
   m_ObjectHideFlags: 0

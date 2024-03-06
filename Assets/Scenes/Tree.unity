@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616bb8870476a9548bf07e8665ed0797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenename: Class-Office
   buttons:
   - {fileID: 1388713944}
   - {fileID: 1726769064}
@@ -1306,8 +1307,22 @@ MonoBehaviour:
   - {fileID: 800697831}
   - {fileID: 1109564809}
   - {fileID: 553327775}
-  lv2Buttons: []
-  lv3Buttons: []
+  lv2Buttons:
+  - {fileID: 553327775}
+  - {fileID: 1109564809}
+  - {fileID: 800697831}
+  - {fileID: 1249714769}
+  - {fileID: 554923385}
+  - {fileID: 1726769064}
+  - {fileID: 1388713944}
+  lv3Buttons:
+  - {fileID: 1388713944}
+  - {fileID: 1726769064}
+  - {fileID: 554923385}
+  - {fileID: 1249714769}
+  - {fileID: 800697831}
+  - {fileID: 1109564809}
+  - {fileID: 553327775}
   lifecount: 3
   gamelevel: 1
   wrongorder: 0
