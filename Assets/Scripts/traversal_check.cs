@@ -40,9 +40,7 @@ public class traversal_check : MonoBehaviour
                     {
                         // Game over logic or reset level
                         Debug.Log("Game Over");
-                        lifecount = 3; //Resets life count after losing three times. Fix.
-                        gamelevel = 1;
-                        SetButtonsOrder();
+                       
                     }
                     else
                     {
