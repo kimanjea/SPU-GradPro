@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartPage.unity
+    guid: e0582c543751af044bce8334131e5d7a
+  - enabled: 1
     path: Assets/Scenes/OMH-main.unity
     guid: 44630ee2b9e114945ba8307325aba46b
   - enabled: 1
