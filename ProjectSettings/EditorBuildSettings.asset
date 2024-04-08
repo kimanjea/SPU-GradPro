@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartPage.unity
     guid: e0582c543751af044bce8334131e5d7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OMH-main.unity
     guid: 44630ee2b9e114945ba8307325aba46b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Class-Office.unity
     guid: e50e523aebba8d946b50cdb078ee4b71
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tree.unity
     guid: 20cdae0b295948e48b722d8cb7e11654
+  - enabled: 1
+    path: Assets/Convai/Scenes/Convai Demo WebGL.unity
+    guid: 4d88fa024e94f554cb462d9d7f1227fb
   m_configObjects: {}
