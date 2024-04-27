@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class traversal_check : MonoBehaviour
 {
+
+    Progress progression;
     public string scenename;
     public GameObject[] buttons;
     public GameObject[] lv2Buttons;
@@ -110,7 +112,14 @@ public class traversal_check : MonoBehaviour
     IEnumerator levelsuccess(float waitTime)
     {        
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(scenename); 
+        SceneManager.LoadScene(scenename);
+        addprogress();
+        //first clear
+    }
+
+    void addprogress()
+    {
+        progression.progression += 25;
     }
 
 }

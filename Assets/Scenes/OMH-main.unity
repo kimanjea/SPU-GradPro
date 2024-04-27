@@ -4549,7 +4549,7 @@ GameObject:
   - component: {fileID: 964167885}
   - component: {fileID: 964167884}
   - component: {fileID: 964167883}
-  - component: {fileID: 964167882}
+  - component: {fileID: 964167887}
   m_Layer: 0
   m_Name: Teledoor
   m_TagString: Untagged
@@ -4557,18 +4557,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &964167882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964167881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9647c69fbc9b70546b42a251e6000bbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &964167883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4655,6 +4643,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964167887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964167881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ace9cd2f849f34aa541b49c8103af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addProgress: 1
+  sceneSwap: {fileID: 0}
+  sceneName: Class-Office
 --- !u!1 &965487086
 GameObject:
   m_ObjectHideFlags: 0
