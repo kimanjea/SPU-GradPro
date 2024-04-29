@@ -16,6 +16,9 @@ public class Teleport : MonoBehaviour
             sceneSwap.SwapAndTeleport(sceneName);
             Debug.Log("New Scene Loaded: " + sceneName);
             addprogress();
+         
+            SceneManager.LoadScene(sceneName);
+            
         }
     }
 

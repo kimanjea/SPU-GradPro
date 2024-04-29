@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42221254, g: 0.64316183, b: 0.793691, a: 1}
+  m_IndirectSpecularColor: {r: 0.42222098, g: 0.64365846, b: 0.7936594, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -505,7 +505,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 39.570293
+  field of view: 30.000002
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Width: 11.8
+  m_Width: 6.82
   m_Damping: 1
   m_MinFOV: 30
   m_MaxFOV: 60
@@ -4655,9 +4655,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ace9cd2f849f34aa541b49c8103af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   addProgress: 1
   sceneSwap: {fileID: 0}
   sceneName: Class-Office
+=======
+  scenename: Class-Office
+>>>>>>> Stashed changes
 --- !u!1 &965487086
 GameObject:
   m_ObjectHideFlags: 0
