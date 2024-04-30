@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Teleport : MonoBehaviour
+public class teleport : MonoBehaviour
 {
     public bool addProgress; // Flag to determine whether to add progress when teleporting
     Progress Progress;

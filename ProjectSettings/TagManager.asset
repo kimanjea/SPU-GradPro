@@ -7,6 +7,7 @@ TagManager:
   - Character
   - floor
   - Progress
+  - door
   layers:
   - Default
   - TransparentFX
