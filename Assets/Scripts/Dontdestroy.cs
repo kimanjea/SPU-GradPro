@@ -4,7 +4,7 @@ public class Dontdestroy : MonoBehaviour
 {
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("progress");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Progress");
 
         if (objs.Length > 1)
         {
