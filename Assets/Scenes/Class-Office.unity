@@ -527,7 +527,7 @@ MonoBehaviour:
   addProgress: 0
   sceneSwap: {fileID: 0}
   needSwap: 0
-  sceneName: School Corridor
+  sceneName: Tree
 --- !u!1 &368844843
 GameObject:
   m_ObjectHideFlags: 0
