@@ -65,7 +65,7 @@ public class traversal_check : MonoBehaviour
         }
         if (gamelevel > 3)
         {
-            StartCoroutine(levelsuccess(10f));
+            StartCoroutine(levelsuccess(5f));
         }
         
     }

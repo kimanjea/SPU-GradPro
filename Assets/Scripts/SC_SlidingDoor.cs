@@ -11,6 +11,7 @@ public class SC_SlidingDoor : MonoBehaviour
     public OpenDirection direction = OpenDirection.y;
     public float openDistance = 7f;
     public float openSpeedMultiplier = 2.0f;
+    public bool haslife = false;
     public Transform doorBody;
 
     bool open = false;
@@ -33,8 +34,11 @@ public class SC_SlidingDoor : MonoBehaviour
     // Main function
     void Update()
     {
-        // Check if the life count has reached 0
-        if (lifecount != null && lifecount.lifecount == 0)
+        if(haslife == true)
+        {
+            includelifecount();
+        }
+        else
         {
             GetComponent<Collider>().isTrigger = true;
             if (!doorBody)
@@ -58,6 +62,7 @@ public class SC_SlidingDoor : MonoBehaviour
                 doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(currentDoorPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), openTime));
             }
         }
+       
     }
 
     // Activate the Main function when the Player enters the trigger area
@@ -79,6 +84,34 @@ public class SC_SlidingDoor : MonoBehaviour
             open = false;
             currentDoorPosition = doorBody.localPosition;
             openTime = 0;
+        }
+    }
+
+    void includelifecount()
+    {
+        if (lifecount != null && lifecount.lifecount == 0)
+        {
+            GetComponent<Collider>().isTrigger = true;
+            if (!doorBody)
+                return;
+
+            if (openTime < 1)
+            {
+                openTime += Time.deltaTime * openSpeedMultiplier * openSpeedCurve.Evaluate(openTime);
+            }
+
+            if (direction == OpenDirection.x)
+            {
+                doorBody.localPosition = new Vector3(Mathf.Lerp(currentDoorPosition.x, defaultDoorPosition.x + (open ? openDistance : 0), openTime), doorBody.localPosition.y, doorBody.localPosition.z);
+            }
+            else if (direction == OpenDirection.y)
+            {
+                doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(currentDoorPosition.y, defaultDoorPosition.y + (open ? openDistance : 0), openTime), doorBody.localPosition.z);
+            }
+            else if (direction == OpenDirection.z)
+            {
+                doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(currentDoorPosition.z, defaultDoorPosition.z + (open ? openDistance : 0), openTime));
+            }
         }
     }
 }

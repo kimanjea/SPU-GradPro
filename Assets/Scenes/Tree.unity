@@ -2320,7 +2320,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: -1.88, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &603885434
 MeshRenderer:
@@ -2387,7 +2387,7 @@ MonoBehaviour:
   addProgress: 0
   sceneSwap: {fileID: 0}
   needSwap: 0
-  sceneName: Class-Office
+  sceneName: Classroom
 --- !u!1 &627076244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616bb8870476a9548bf07e8665ed0797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenename: OMH-main
+  scenename: School Corridor
   buttons:
   - {fileID: 1388713944}
   - {fileID: 1726769064}
@@ -4770,6 +4770,7 @@ MonoBehaviour:
   direction: 0
   openDistance: 30
   openSpeedMultiplier: 6
+  haslife: 1
   doorBody: {fileID: 1411229227}
 --- !u!1 &1465825101
 GameObject:

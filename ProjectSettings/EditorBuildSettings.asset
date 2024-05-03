@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OMH-main.unity
     guid: 44630ee2b9e114945ba8307325aba46b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Class-Office.unity
     guid: e50e523aebba8d946b50cdb078ee4b71
   - enabled: 1
@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Convai/Scenes/Convai Demo WebGL.unity
     guid: 4d88fa024e94f554cb462d9d7f1227fb
+  - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: 486840f6ec940324784dc26b5d42a751
+  - enabled: 1
+    path: Assets/Scenes/QuizGame.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
