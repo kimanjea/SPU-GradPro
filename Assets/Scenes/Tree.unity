@@ -2387,7 +2387,7 @@ MonoBehaviour:
   addProgress: 0
   sceneSwap: {fileID: 0}
   needSwap: 0
-  sceneName: 
+  sceneName: Class-Office
 --- !u!1 &627076244
 GameObject:
   m_ObjectHideFlags: 0
