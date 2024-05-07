@@ -4,20 +4,23 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: MORE MATH
+  m_Name: Tree traversal 1
   m_EditorClassIdentifier: 
-  _info: 2+2=?
+  _info: Which tree traversal method visits the root node first?
   _answers:
-  - _info: 1
+  - _info: Inorder
     _isCorrect: 0
-  - _info: 4
+  - _info: Postorder
+    _isCorrect: 0
+  - _info: Preorder
     _isCorrect: 1
-  _useTimer: 1
-  _timer: 4
-  _answerType: 0
-  _addScore: 10
+  _useTimer: 0
+  _timer: 10
+  _answerType: 1
+  _addScore: 20

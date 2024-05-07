@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: ImportantQuestion
+  m_Name: Graph Structure
   m_EditorClassIdentifier: 
-  _info: The earth is..?
+  _info: 'In a graph, nodes are also known as:'
   _answers:
-  - _info: Flat
+  - _info: Edges
     _isCorrect: 0
-  - _info: Sphere
+  - _info: Vertices
     _isCorrect: 1
-  - _info: Box
+  - _info: Weights
     _isCorrect: 0
-  - _info: Donut
-    _isCorrect: 0
-  _useTimer: 1
+  _useTimer: 0
   _timer: 30
   _answerType: 1
-  _addScore: 50
+  _addScore: 20
