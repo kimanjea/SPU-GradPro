@@ -8,7 +8,8 @@ public class EscMenu : MonoBehaviour
     public GameObject menuList;
     [SerializeField] private bool menuKeys = true;
     [SerializeField] private AudioSource bgm;
-    
+    [SerializeField] private int sceneID; 
+
     void Update()
     {
         if(menuKeys)
@@ -48,7 +49,7 @@ public class EscMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(sceneID); 
     }
 
     public void Exit()

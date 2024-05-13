@@ -1372,6 +1372,7 @@ MonoBehaviour:
   menuList: {fileID: 1588428701}
   menuKeys: 1
   bgm: {fileID: 0}
+  sceneID: 5
 --- !u!1 &597978889
 GameObject:
   m_ObjectHideFlags: 0
