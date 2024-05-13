@@ -11,15 +11,17 @@ public class LoadManager : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI text;
 
-    public void LoadNextLevel()
+    public RawImage rawImage;
+
+    public void LoadNextLevel(int sceneID)
     {
-        StartCoroutine(LoadLevel());
+        StartCoroutine(LoadLevel(sceneID));
     }
 
-    IEnumerator LoadLevel()
+    IEnumerator LoadLevel(int sceneID)
     {
         loadScreen.SetActive(true);
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneID);
         operation.allowSceneActivation = false;
 
         while (!operation.isDone)
@@ -31,15 +33,14 @@ public class LoadManager : MonoBehaviour
             {
                 slider.value = 1;
                 text.text = "Press Any Key to Continue";
+
+                if (Input.anyKeyDown) 
+                {
+                    operation.allowSceneActivation = true;
+                }
             }
 
             yield return null;
-        }
-
-        
-        if (Input.anyKeyDown)
-        {
-            operation.allowSceneActivation = true;
         }
     }
 }
