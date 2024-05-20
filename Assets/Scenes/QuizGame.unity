@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuList: {fileID: 1588428701}
   menuKeys: 1
-  bgm: {fileID: 0}
+  bgm: {fileID: 82509203759054478, guid: 0b2c85631b731e34faec7b3adb879f79, type: 3}
   sceneID: 5
 --- !u!1 &597978889
 GameObject:
