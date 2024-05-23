@@ -9,6 +9,7 @@ TagManager:
   - Progress
   - door
   - Renderer
+  - Arrow
   layers:
   - Default
   - TransparentFX

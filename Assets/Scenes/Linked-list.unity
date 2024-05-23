@@ -152,14 +152,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259f5be65e20c9b43a128f6bd3d29635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabletPrefab: {fileID: 1774661282298506559, guid: b7c323073beeb0b42a8412d881577235, type: 3}
   tablets:
   - {fileID: 704475685}
   - {fileID: 707640801}
   - {fileID: 778962564}
   - {fileID: 1204232059}
-  - {fileID: 2099239320}
   firstClickedTablet: {fileID: 0}
+  arrowPrefab: {fileID: 5389126041217787021, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
+  node:
+  - {fileID: 1204232059}
+  - {fileID: 707640801}
+  - {fileID: 704475685}
+  - {fileID: 778962564}
+  usernodes: []
+  lifecount: 3
 --- !u!4 &3602761
 Transform:
   m_ObjectHideFlags: 0
@@ -3475,11 +3481,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f4814451272e874f9d7dc1534b22b63, type: 3}
---- !u!1 &2099239320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1774661282298506559, guid: b7c323073beeb0b42a8412d881577235, type: 3}
-  m_PrefabInstance: {fileID: 71947399}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2099239324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1435255905258764165, guid: b7c323073beeb0b42a8412d881577235, type: 3}
