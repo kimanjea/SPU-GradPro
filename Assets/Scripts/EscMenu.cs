@@ -9,16 +9,6 @@ public class EscMenu : MonoBehaviour
     [SerializeField] private bool menuKeys = true;
     [SerializeField] private AudioSource bgm;
     [SerializeField] private int sceneID; 
-    private bool bgmWasPlayingBeforeMenuOpened;
-
-    void Start()
-    {
-        // 如果 bgm 不为空，则记录下当前是否正在播放
-        if (bgm != null)
-        {
-            bgmWasPlayingBeforeMenuOpened = bgm.isPlaying;
-        }
-    }
 
     void Update()
     {
@@ -28,11 +18,10 @@ public class EscMenu : MonoBehaviour
             {
                 menuList.SetActive(true);
                 menuKeys = false;
-
-                // 如果 bgm 不为空且当前正在播放，则暂停播放
-                if (bgm != null && bgm.isPlaying)
+                
+                if (bgm != null)
                 {
-                    bgm.Pause();
+                    bgm.Pause(); 
                 }
             }
         }
@@ -42,11 +31,10 @@ public class EscMenu : MonoBehaviour
             {
                 menuList.SetActive(false);
                 menuKeys = true;
-
-                // 如果 bgm 不为空且在菜单打开之前正在播放，则恢复播放
-                if (bgm != null && bgmWasPlayingBeforeMenuOpened)
+                
+                if (bgm != null)
                 {
-                    bgm.UnPause();
+                    bgm.UnPause(); 
                 }
             }
         }
@@ -57,16 +45,20 @@ public class EscMenu : MonoBehaviour
         menuList.SetActive(false);
         menuKeys = true;
         
-        // 如果 bgm 不为空，则确保在返回时恢复播放
-        if (bgm != null && bgmWasPlayingBeforeMenuOpened)
+        if (bgm != null)
         {
-            bgm.UnPause();
+            bgm.UnPause(); 
         }
     }
 
     public void Restart()
     {
         SceneManager.LoadScene(sceneID); 
+    }
+
+    public void ReturnMain()
+    {
+        SceneManager.LoadScene(0); 
     }
 
     public void Exit()
