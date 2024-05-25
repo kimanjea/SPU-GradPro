@@ -119,7 +119,7 @@ public class traversal_check : MonoBehaviour
 
     void addprogress()
     {
-        progression.progression += 25;
+        //progression.progression += 25;
     }
 
 }

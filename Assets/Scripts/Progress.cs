@@ -1,26 +1,16 @@
-using UnityEngine;
-
-public class Progress : MonoBehaviour
+public class Progress
 {
-    public int progression = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Overall Game Progression Variable
+    public static int level = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(progression);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            progression += 25;
-        }
-    }
+    // Minigame Clear Checks
+    public static bool treeGameClear;
+    public static bool linkListGameClear;
 
-
-
+    // Quiz Game Clear Checks
+    public static bool quiz1Pass = false;
+    public static bool quiz2Pass = false;
+    public static bool quiz3Pass = false;
 
 }
