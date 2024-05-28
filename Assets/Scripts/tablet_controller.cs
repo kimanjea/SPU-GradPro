@@ -3,12 +3,12 @@ using UnityEngine;
 public class TabletController : MonoBehaviour
 {
     private Linked_list manager;
-    private Renderer renderer;
+    private Renderer render;
 
     void Start()
     {
         manager = FindObjectOfType<Linked_list>();
-        renderer = GetComponent<Renderer>();
+        render = GetComponent<Renderer>();
         if (manager == null)
         {
             Debug.LogError("LinkedListManager not found in the scene!");
@@ -28,11 +28,11 @@ public class TabletController : MonoBehaviour
     {
         if (manager.firstClickedTablet == this.gameObject)
         {
-            renderer.material.color = Color.green; // First selected tablet color
+            render.material.color = Color.green; // First selected tablet color
         }
         else
         {
-            renderer.material.color = Color.white; // Reset color if unselected
+            render.material.color = Color.white; // Reset color if unselected
         }
     }
 }

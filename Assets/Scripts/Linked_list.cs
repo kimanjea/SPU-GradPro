@@ -9,9 +9,10 @@ public class Linked_list : MonoBehaviour
     public GameObject firstClickedTablet;
     public GameObject arrowPrefab; // Assign the arrow prefab in the Unity Editor
     public string scenename;
+    public TextUpdate text; // Reference to the TextUpdate script
     Progress progression;
 
-    public GameObject[] node; // correct orders of the nodes for each lvl
+    public GameObject[] node; // correct orders of the nodes for each level
     public GameObject[] lvl2node;
     public GameObject[] lvl3node;
     private List<GameObject> selectedTablets = new List<GameObject>(); // List to keep track of selected tablets
@@ -25,44 +26,42 @@ public class Linked_list : MonoBehaviour
     void Start()
     {
         // Initialize your game here if necessary
+        UpdateLevelText(); // Initialize the level text at the start
     }
 
     void Update()
     {
         // Ensure that both the usernodes list and the node array have elements
-        if (usernodes.Count > 0 && node.Length > 0)
+        if (usernodes.Count > 0 && usernodes.Count == node.Length)
         {
-            // Ensure that the usernodes list has the same count as the node array
-            if (usernodes.Count == node.Length)
+            bool correctOrder = true;
+            for (int i = 0; i < node.Length; i++)
             {
-                for (int i = 0; i < node.Length; i++)
+                if (usernodes[i].name != node[i].name)
                 {
-                    if (usernodes[i].name != node[i].name)
+                    Debug.Log("Wrong Order");
+                    lifecount--;
+                    if (lifecount == 0)
                     {
-                        Debug.Log("Wrong Order");
-                        lifecount--;
-                        if (lifecount == 0)
-                        {
-                            StartCoroutine(levelfinished(5f));
-                        }
-
-                        if (lifecount <= 0)
-                        {
-                            // Game over logic or reset level
-                            Debug.Log("Game Over");
-                            // Add any additional game over logic here
-                        }
-                        else
-                        {
-                            // Incorrect order but still has lives, continue to the next attempt
-                            ClearUserButtons();
-                        }
-                        return;
+                        StartCoroutine(levelfinished(5f));
+                        return; // Exit the method to prevent further execution
+                    }
+                    else
+                    {
+                        // Incorrect order but still has lives, continue to the next attempt
+                        ClearUserButtons();
+                        correctOrder = false;
+                        break; // Exit the loop to avoid further checking
                     }
                 }
+            }
+
+            if (correctOrder)
+            {
                 // If the loop completes without returning, it means the order is correct
                 Debug.Log("Correct Order");
                 gamelevel++;
+                UpdateLevelText(); // Update the level text when the game level changes
                 ClearUserButtons(); // Clear user selections
                 SetnodeOrder(); // Set the node order for the next level
                 if (gamelevel > 3)
@@ -122,12 +121,14 @@ public class Linked_list : MonoBehaviour
 
     void CreateArrow(GameObject fromTablet, GameObject toTablet)
     {
-        GameObject arrow = Instantiate(arrowPrefab); // Instantiate arrow prefab
-        arrow.transform.position = (fromTablet.transform.position + toTablet.transform.position) / 2f; // Position arrow between two tablets
-        arrow.transform.LookAt(toTablet.transform.position); // Make arrow point towards the 'toTablet'
-        Vector3 scale = arrow.transform.localScale;
-        scale.z = Vector3.Distance(fromTablet.transform.position, toTablet.transform.position); // Scale arrow to fit between two tablets
-        arrow.transform.localScale = scale;
+        GameObject arrow = new GameObject("Arrow");
+        LineRenderer lr = arrow.AddComponent<LineRenderer>();
+        lr.positionCount = 2;
+        lr.SetPosition(0, fromTablet.transform.position);
+        lr.SetPosition(1, toTablet.transform.position);
+        lr.startWidth = 0.1f;
+        lr.endWidth = 0.1f;
+        lr.material = new Material(Shader.Find("Sprites/Default")) { color = Color.red };
         arrow.tag = "Arrow"; // Ensure the arrow has the "Arrow" tag
     }
 
@@ -172,11 +173,19 @@ public class Linked_list : MonoBehaviour
         if (gamelevel > 3)
         {
             addprogress();
-        }//first clear
+        }
     }
+
     void addprogress()
     {
         progression.progression += 25;
     }
 
+    void UpdateLevelText()
+    {
+        if (text != null)
+        {
+            //text.UpdateText("Level: " + gamelevel);
+        }
+    }
 }
