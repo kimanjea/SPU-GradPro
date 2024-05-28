@@ -8,6 +8,8 @@ TagManager:
   - floor
   - Progress
   - door
+  - Renderer
+  - Arrow
   layers:
   - Default
   - TransparentFX

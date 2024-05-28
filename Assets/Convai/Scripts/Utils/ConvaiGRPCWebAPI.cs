@@ -42,7 +42,7 @@ public class ConvaiGRPCWebAPI : MonoBehaviour
         {
             initMicrophone();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Debug.LogWarning("WebGL SDK does not run in Unity Editor. Please build and run in WebGL.");
         }
