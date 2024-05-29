@@ -14,7 +14,7 @@ public class ConversationStarter : MonoBehaviour
         if (other.CompareTag("Player")) {
             // Activate Guiding Text
             textObj.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.T)) {
+            if (Input.GetKey(KeyCode.T)) {
                 ConversationManager.Instance.StartConversation(myConvo);
             }
         }

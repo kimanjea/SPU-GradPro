@@ -17,7 +17,7 @@ public class teleport : MonoBehaviour
     
         if (other.gameObject.CompareTag("Player"))
         {
-            if (requiresgame && Progress.level <= reqprogress){
+            if (requiresgame && Progress.level < reqprogress){
 
                 Debug.Log("You need to complete the game to unlock this level");
                 return;

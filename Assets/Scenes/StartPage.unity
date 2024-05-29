@@ -314,17 +314,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spu Grad Pro
+  m_text: SPU GradPro
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278719999
-  m_fontColor: {r: 1, g: 0.083565824, b: 0.033018887, a: 1}
+    rgba: 4278193663
+  m_fontColor: {r: 1, g: 0.05263158, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2268,7 +2268,6 @@ GameObject:
   - component: {fileID: 954234497}
   - component: {fileID: 954234496}
   - component: {fileID: 954234495}
-  - component: {fileID: 954234494}
   - component: {fileID: 954234493}
   - component: {fileID: 954234492}
   m_Layer: 0
@@ -2302,19 +2301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61167704d1b57a3498814927d2635eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &954234494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954234491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4e5696e16a59f4e833776f44941444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progression: 0
 --- !u!65 &954234495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2946,7 +2932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start
+  m_text: 'START
 
 '
   m_isRightToLeft: 0
@@ -3216,10 +3202,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Process
+  m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

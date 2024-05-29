@@ -178,7 +178,7 @@ public class Linked_list : MonoBehaviour
 
     void addprogress()
     {
-        progression.progression += 25;
+        Progress.level += 1;
     }
 
     void UpdateLevelText()

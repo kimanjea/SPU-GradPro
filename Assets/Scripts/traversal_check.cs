@@ -112,14 +112,16 @@ public class traversal_check : MonoBehaviour
     IEnumerator levelsuccess(float waitTime)
     {        
         yield return new WaitForSeconds(waitTime);
+        AddProgress();
         SceneManager.LoadScene(scenename);
-        addprogress();
         //first clear
     }
 
-    void addprogress()
+    void AddProgress()
     {
         //progression.progression += 25;
+        Progress.level += 1;
+
     }
 
 }
