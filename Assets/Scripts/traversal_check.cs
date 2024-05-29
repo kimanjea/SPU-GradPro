@@ -112,7 +112,10 @@ public class traversal_check : MonoBehaviour
     IEnumerator levelsuccess(float waitTime)
     {        
         yield return new WaitForSeconds(waitTime);
-        AddProgress();
+        if (!Progress.treeGameClear) {
+            AddProgress();
+            Progress.treeGameClear = true;
+        }
         SceneManager.LoadScene(scenename);
         //first clear
     }
