@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalQuizGame.unity
     guid: 7fa05933f0ddc604a9ff27039b57f8b5
+  - enabled: 1
+    path: Assets/Scenes/Linked-list.unity
+    guid: fc7981980dd90ee40b53eda4bd70c5fb
+  - enabled: 1
+    path: Assets/Scenes/Classroom1.unity
+    guid: cbeacdee5708adb4fa74e6ed7dacba33
   m_configObjects: {}
