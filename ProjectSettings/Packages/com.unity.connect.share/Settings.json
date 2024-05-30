@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/13608/Documents/GitHub/SPU-GradPro/WebGL Builds;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/TestBuild4;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/TestBuild3;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/Build;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds;C:/Users/EmilP/Documents/Unity Projects/SPU-GradPro/WebGL Builds;C:/Users/azara/Documents/GitHub/SPU-GradPro/WebGL Builds;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/EmilP/Documents/Unity Projects/SPU-GradPro/ProjectBuild;C:/Users/13608/Documents/GitHub/SPU-GradPro/WebGL Builds;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/TestBuild4;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/TestBuild3;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds/Build;C:/Users/StudentE/Documents/School Documents/Coding Projects/SPU-GradPro/WebGL Builds;C:/Users/EmilP/Documents/Unity Projects/SPU-GradPro/WebGL Builds;C:/Users/azara/Documents/GitHub/SPU-GradPro/WebGL Builds;;\"}"
             }
         ]
     }

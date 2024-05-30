@@ -163,7 +163,7 @@ MonoBehaviour:
   - {fileID: 1367172091}
   firstClickedTablet: {fileID: 0}
   arrowPrefab: {fileID: 919132149155446097, guid: 89e3544d23c96a5429029486fd9242db, type: 3}
-  scenename: 
+  scenename: School Corridor
   text: {fileID: 0}
   node:
   - {fileID: 1204232059}
