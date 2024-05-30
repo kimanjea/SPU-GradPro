@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1993963878}
   m_HandleRect: {fileID: 1993963877}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   menuList: {fileID: 1588428701}
   menuKeys: 1
   bgm: {fileID: 82509203759054478, guid: 0b2c85631b731e34faec7b3adb879f79, type: 3}
-  sceneID: 5
+  sceneName: 
 --- !u!1 &597978889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,7 +2797,7 @@ MonoBehaviour:
       Pitch: 1
       Loop: 1
     Source: {fileID: 0}
-  sourcePrefab: {fileID: 0}
+  sourcePrefab: {fileID: 82509203759054478, guid: 0b2c85631b731e34faec7b3adb879f79, type: 3}
   startupTrack: GameMusic
 --- !u!1 &1350611929
 GameObject:
