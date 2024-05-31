@@ -20,9 +20,12 @@ public struct UIManagerParameters
     [SerializeField] Color finalBGColor;
     public Color FinalBGColor { get { return finalBGColor; } }
 }
+
 [Serializable()]
 public struct UIElements
 {
+    Progress progression;
+
     [SerializeField] RectTransform answersContentArea;
     public RectTransform AnswersContentArea { get { return answersContentArea; } }
 
@@ -57,27 +60,30 @@ public struct UIElements
     [SerializeField] RectTransform finishUIElements;
     public RectTransform FinishUIElements { get { return finishUIElements; } }
 }
-public class UIManager : MonoBehaviour {
 
+public class UIManager : MonoBehaviour
+{
     #region Variables
 
-    public enum         ResolutionScreenType   { Correct, Incorrect, Finish }
+    public enum ResolutionScreenType { Correct, Incorrect, Finish }
 
     [Header("References")]
-    [SerializeField]    GameEvents             events                       = null;
+    [SerializeField] GameEvents events = null;
 
     [Header("UI Elements (Prefabs)")]
-    [SerializeField]    AnswerData             answerPrefab                 = null;
+    [SerializeField] AnswerData answerPrefab = null;
 
-    [SerializeField]    UIElements             uIElements                   = new UIElements();
+    [SerializeField] UIElements uIElements = new UIElements();
 
     [Space]
-    [SerializeField]    UIManagerParameters    parameters                   = new UIManagerParameters();
+    [SerializeField] UIManagerParameters parameters = new UIManagerParameters();
 
-    private             List<AnswerData>       currentAnswers               = new List<AnswerData>();
-    private             int                    resStateParaHash             = 0;
+    [SerializeField] private int passingmark = 50;
 
-    private             IEnumerator            IE_DisplayTimedResolution    = null;
+    private List<AnswerData> currentAnswers = new List<AnswerData>();
+    private int resStateParaHash = 0;
+
+    private IEnumerator IE_DisplayTimedResolution = null;
 
     #endregion
 
@@ -88,18 +94,19 @@ public class UIManager : MonoBehaviour {
     /// </summary>
     void OnEnable()
     {
-        events.UpdateQuestionUI         += UpdateQuestionUI;
-        events.DisplayResolutionScreen  += DisplayResolution;
-        events.ScoreUpdated             += UpdateScoreUI;
+        events.UpdateQuestionUI += UpdateQuestionUI;
+        events.DisplayResolutionScreen += DisplayResolution;
+        events.ScoreUpdated += UpdateScoreUI;
     }
+
     /// <summary>
     /// Function that is called when the behaviour becomes disabled
     /// </summary>
     void OnDisable()
     {
-        events.UpdateQuestionUI         -= UpdateQuestionUI;
-        events.DisplayResolutionScreen  -= DisplayResolution;
-        events.ScoreUpdated             -= UpdateScoreUI;
+        events.UpdateQuestionUI -= UpdateQuestionUI;
+        events.DisplayResolutionScreen -= DisplayResolution;
+        events.ScoreUpdated -= UpdateScoreUI;
     }
 
     /// <summary>
@@ -121,6 +128,7 @@ public class UIManager : MonoBehaviour {
         uIElements.QuestionInfoTextObject.text = question.Info;
         CreateAnswers(question);
     }
+
     /// <summary>
     /// Function that is used to display resolution screen.
     /// </summary>
@@ -140,6 +148,7 @@ public class UIManager : MonoBehaviour {
             StartCoroutine(IE_DisplayTimedResolution);
         }
     }
+
     IEnumerator DisplayTimedResolution()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
@@ -174,6 +183,17 @@ public class UIManager : MonoBehaviour {
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
                 uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>new </color>" : string.Empty) + "Highscore: " + highscore;
+
+                // Show Pass or Fail based on the score
+                if (events.CurrentFinalScore >= passingmark)
+                {
+                    uIElements.ResolutionStateInfoText.text = "PASS!";
+                    Progress.quiz1Pass = true;
+                }
+                else
+                {
+                    uIElements.ResolutionStateInfoText.text = "FAIL!";
+                }
                 break;
         }
     }
@@ -214,6 +234,7 @@ public class UIManager : MonoBehaviour {
             currentAnswers.Add(newAnswer);
         }
     }
+
     /// <summary>
     /// Function that is used to erase current created answers.
     /// </summary>
