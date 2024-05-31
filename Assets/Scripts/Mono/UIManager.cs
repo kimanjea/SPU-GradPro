@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] UIManagerParameters parameters = new UIManagerParameters();
 
     [SerializeField] private int passingmark = 50;
+     public int currentquiz = 1;
 
     private List<AnswerData> currentAnswers = new List<AnswerData>();
     private int resStateParaHash = 0;
@@ -188,7 +189,19 @@ public class UIManager : MonoBehaviour
                 if (events.CurrentFinalScore >= passingmark)
                 {
                     uIElements.ResolutionStateInfoText.text = "PASS!";
-                    Progress.quiz1Pass = true;
+                    if (currentquiz == 1)
+                    {
+                        Progress.quiz1Pass = true;
+                    }
+                    else if (currentquiz == 2)
+                    {
+                        Progress.quiz2Pass = true;
+                    }
+                    else
+                    {
+                        Progress.quiz3Pass = true;
+                    }
+                    
                 }
                 else
                 {
