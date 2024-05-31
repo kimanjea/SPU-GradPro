@@ -291,7 +291,7 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("School Corridor");
     }
 
     /// <summary>

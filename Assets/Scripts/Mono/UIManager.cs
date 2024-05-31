@@ -191,15 +191,24 @@ public class UIManager : MonoBehaviour
                     uIElements.ResolutionStateInfoText.text = "PASS!";
                     if (currentquiz == 1)
                     {
-                        Progress.quiz1Pass = true;
+                        if (!Progress.quiz1Pass) {
+                            Progress.quiz1Pass = true;
+                            Progress.level += 1;
+                        }
                     }
                     else if (currentquiz == 2)
                     {
-                        Progress.quiz2Pass = true;
+                        if (!Progress.quiz2Pass) {
+                            Progress.quiz2Pass = true;
+                            Progress.level += 1;
+                        }
                     }
                     else
                     {
-                        Progress.quiz3Pass = true;
+                        if (!Progress.quiz3Pass) {
+                            Progress.quiz3Pass = true;
+                            Progress.level += 1;
+                        }
                     }
                     
                 }

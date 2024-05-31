@@ -14,7 +14,7 @@ public class EscMenu : MonoBehaviour
     {
         if(menuKeys)
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if(Input.GetKeyDown(KeyCode.P))
             {
                 menuList.SetActive(true);
                 menuKeys = false;
@@ -27,7 +27,7 @@ public class EscMenu : MonoBehaviour
         }
         else
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if(Input.GetKeyDown(KeyCode.P))
             {
                 menuList.SetActive(false);
                 menuKeys = true;

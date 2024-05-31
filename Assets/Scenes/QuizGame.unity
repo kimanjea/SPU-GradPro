@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1993963877}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.8230089
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1925,6 +1925,8 @@ MonoBehaviour:
     correctBGColor: {r: 0.18431373, g: 0.76470596, b: 0.14901961, a: 1}
     incorrectBGColor: {r: 0.76470596, g: 0.15686275, b: 0.14901961, a: 1}
     finalBGColor: {r: 0.14901961, g: 0.5058824, b: 0.76470596, a: 1}
+  passingmark: 50
+  currentquiz: 1
 --- !u!114 &849180835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,7 +2819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1457946714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3009,7 +3011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888184}
+  m_AnchoredPosition: {x: 0, y: -0.000022888184}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1704503186
