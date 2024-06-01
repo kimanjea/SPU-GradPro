@@ -11,6 +11,7 @@ public class traversal_check : MonoBehaviour
     public GameObject[] buttons;
     public GameObject[] lv2Buttons;
     public GameObject[] lv3Buttons;
+    public GameObject victoryPanel;
     public int lifecount = 3;
     public int gamelevel = 1;
     public bool wrongorder = false;
@@ -65,7 +66,7 @@ public class traversal_check : MonoBehaviour
         }
         if (gamelevel > 3)
         {
-            StartCoroutine(levelsuccess(5f));
+            StartCoroutine(levelsuccess(1f));
         }
         
     }
@@ -116,8 +117,7 @@ public class traversal_check : MonoBehaviour
             AddProgress();
             Progress.treeGameClear = true;
         }
-        SceneManager.LoadScene(scenename);
-        //first clear
+        victoryPanel.SetActive(true);
     }
 
     void AddProgress()
@@ -127,4 +127,8 @@ public class traversal_check : MonoBehaviour
 
     }
 
+    public void LeaveGame()
+    {
+        SceneManager.LoadScene("School Corridor");
+    }
 }
