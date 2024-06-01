@@ -36,7 +36,7 @@ public class TextUpdate : MonoBehaviour
         return "No nodes available";
     }
 
-    string UpdateChoiceNodeText() // Shows the player's current choice to see what their list looks like
+    string UpdateChoiceNodeText()
     {
         List<GameObject> currentNodes = linkedList.usernodes;
 
@@ -45,14 +45,26 @@ public class TextUpdate : MonoBehaviour
             string formattedText = "";
             for (int i = 0; i < currentNodes.Count; i++)
             {
-                formattedText += currentNodes[i].name;
-                if (i < currentNodes.Count - 1)
+                if (currentNodes[i] != null)
                 {
-                    formattedText += "->";
+                    formattedText += currentNodes[i].name;
+                    if (i < currentNodes.Count - 1 && currentNodes[i + 1] != null)
+                    {
+                        formattedText += "->";
+                    }
+                    else
+                    {
+                        formattedText += " ";
+                    }
+                }
+                else
+                {
+                    formattedText += " ";
                 }
             }
             return formattedText;
         }
         return "No nodes selected";
     }
+
 }
