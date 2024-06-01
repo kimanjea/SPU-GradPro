@@ -38,6 +38,10 @@ public class MainSceneManager : MonoBehaviour
         else {
             scoreText.text = "Sophomore";
         }
+        if (Progress.level > 4) {
+            scoreText.text = "Graduate";
+            lvl4Objects.SetActive(true);
+        }
     }
 
     // Update is called once per frame

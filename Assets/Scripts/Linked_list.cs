@@ -10,7 +10,7 @@ public class Linked_list : MonoBehaviour
     public GameObject arrowPrefab; // Assign the arrow prefab in the Unity Editor
     public string scenename;
     public TextUpdate text; // Reference to the TextUpdate script
-    Progress progression;
+    public GameObject victoryPanel;
 
     public GameObject[] node; // correct orders of the nodes for each level
     public GameObject[] lvl2node;
@@ -67,11 +67,12 @@ public class Linked_list : MonoBehaviour
                     SetnodeOrder(); // Set the node order for the next level
                     if (gamelevel > 3)
                     {
-                        StartCoroutine(levelfinished(5f));
+                        StartCoroutine(levelfinished(1f));
                     }
                 }
             }else if (usernodes.Count > node.Length){
                 ClearUserButtons();
+                lifecount--;
             }
         }
 
@@ -185,14 +186,14 @@ public class Linked_list : MonoBehaviour
         IEnumerator levelfinished(float waitTime)
         {
             yield return new WaitForSeconds(waitTime);
-            SceneManager.LoadScene(scenename);
-            if (gamelevel > 3)
-            {
-                addprogress();
+            if (!Progress.linkListGameClear) {
+                AddProgress();
+                Progress.linkListGameClear = true;
             }
+            victoryPanel.SetActive(true);
         }
 
-        void addprogress()
+        void AddProgress()
         {
             Progress.level += 1;
         }
@@ -203,5 +204,8 @@ public class Linked_list : MonoBehaviour
             {
                 //text.UpdateText("Level: " + gamelevel);
             }
+        }
+        public void LeaveGame(){
+            SceneManager.LoadScene("School Corridor");
         }
     }

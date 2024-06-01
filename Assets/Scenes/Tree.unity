@@ -4589,7 +4589,7 @@ GameObject:
   - component: {fileID: 1213019779}
   - component: {fileID: 1213019778}
   m_Layer: 5
-  m_Name: ESC
+  m_Name: VictoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
